@@ -329,7 +329,6 @@ li {
     padding-left: 32px; }
 
 .brands-list {
-  overflow: hidden;
   margin: 0;
   padding-top: 24px;
   padding-left: 0;
@@ -567,7 +566,6 @@ li {
     padding-bottom: 50px; } }
 
 .devices-list {
-  overflow: hidden;
   margin: 0;
   padding-left: 0;
   display: flex;
@@ -644,7 +642,6 @@ li {
     padding: 32px; } }
 
 .price-list {
-  overflow: hidden;
   margin: 0;
   padding-top: 24px;
   padding-left: 0;
