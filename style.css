@@ -244,8 +244,7 @@ li {
       line-height: 20px; } }
   @media (min-width: 1120px) {
     .main-slide .body__overflow-off {
-      overflow: hidden;
-      position: fixed; }
+      overflow: hidden; }
     .main-slide .text-content__text--show-part {
       height: 160px;
       overflow: hidden; }
@@ -261,8 +260,7 @@ li {
 
 @media (min-width: 320px) {
   .body__overflow-off {
-    overflow: hidden;
-    position: fixed; }
+    overflow: hidden; }
   .header__contacts-side {
     display: none; }
   .header__logo-side {
