@@ -45,6 +45,7 @@ li {
   list-style: none; }
 
 .main-blocks-container {
+  overflow-x: hidden;
   width: 100%;
   display: flex;
   justify-content: space-between;
