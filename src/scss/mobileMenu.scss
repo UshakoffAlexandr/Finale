@@ -10,7 +10,8 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    z-index: 1;
+    z-index: 0;
+    height: 100vh;
   }
   .main-menu {
     margin: 0;
@@ -86,6 +87,7 @@
   @media (min-width: $screenM) {
     & {
       height: 1024px;
+      width: 100%;
       background-color: rgba(255, 255, 255, 0.95);
       overflow: hidden;
       position: fixed;
@@ -101,6 +103,7 @@
         grid-column: 2/3;
         width: 100%;
         max-width: 100%;
+        z-index: 0;
         height: 100vh;
       }
     }
