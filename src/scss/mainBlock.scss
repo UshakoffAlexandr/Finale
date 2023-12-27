@@ -303,7 +303,6 @@ li {
   @media (min-width: $screenL) {
     .body__overflow-off {
       overflow: hidden;
-      position: fixed;
     }
     .text-content__text--show-part {
       height: 160px;
@@ -328,7 +327,6 @@ li {
 @media (min-width: $screenS) {
   .body__overflow-off {
     overflow: hidden;
-    position: fixed;
   }
   .header__contacts-side {
     display: none;
