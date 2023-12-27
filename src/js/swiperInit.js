@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     addSwiperClasses(priceListBlock, showPartPrices)
     swiperInit()
   }
-  swiperInit()
 })
 
 window.addEventListener('resize', function () {
