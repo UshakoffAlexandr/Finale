@@ -1,10 +1,9 @@
 let brandsBlock = document.querySelector('.brands-block')
 let devicesBlock = document.querySelector('.devices-block')
 let priceListBlock = document.querySelector('.price-list-block')
-let showPartBrands = 'brands-list--show-part'
+let showPartbrands = 'brands-list--show-part'
 let showPartDevices = 'devices-list--show-part'
-let showPartPrices = 'empty-class'
-
+let showPartPrices = 'empy-class'
 function addSwiperClasses(block, showPart) {
   let containerForSwiper = block.querySelector('.for-swiper')
   let wrapper = containerForSwiper.querySelector('.for-wrapper')
@@ -15,6 +14,7 @@ function addSwiperClasses(block, showPart) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.add('swiper-slide')
   }
+
   forPagination.classList.add('swiper-pagination')
   wrapper.classList.remove(showPart)
 }
@@ -24,12 +24,14 @@ let swiperInit = function () {
     slidesPerView: 'auto',
     spaceBetween: 16,
     loop: true,
+
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
     }
   })
+
   return swiper
 }
 
@@ -53,7 +55,7 @@ let deleteSwiperClasses = (block, showPart) => {
 document.addEventListener('DOMContentLoaded', function () {
   let windowWidth = document.documentElement.clientWidth
   if (windowWidth < 768) {
-    addSwiperClasses(brandsBlock, showPartBrands)
+    addSwiperClasses(brandsBlock, showPartbrands)
     addSwiperClasses(devicesBlock, showPartDevices)
     addSwiperClasses(priceListBlock, showPartPrices)
     swiperInit()
@@ -62,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('resize', function () {
   let windowWidth = document.documentElement.clientWidth
-  addSwiperClasses(brandsBlock, showPartBrands)
+  addSwiperClasses(brandsBlock, showPartbrands)
   addSwiperClasses(devicesBlock, showPartDevices)
   addSwiperClasses(priceListBlock)
   if (windowWidth >= 768) {
-    deleteSwiperClasses(brandsBlock, showPartBrands)
+    deleteSwiperClasses(brandsBlock, showPartbrands)
     deleteSwiperClasses(devicesBlock, showPartDevices)
     deleteSwiperClasses(priceListBlock, showPartPrices)
   }
