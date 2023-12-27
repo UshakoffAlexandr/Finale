@@ -160,6 +160,7 @@ li {
 
   @media (min-width: $screenM) {
     & {
+      flex-wrap: wrap;
       padding-left: 24px;
     }
 
