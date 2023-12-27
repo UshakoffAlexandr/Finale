@@ -1,0 +1,6 @@
+import '../scss/style.scss'
+import './swiperInit.js'
+import './btnReadMore.js'
+import './mobileMenu.js'
+import './fbForm.js'
+import './callForm.js'

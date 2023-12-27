@@ -1,0 +1,135 @@
+.brands-block {
+  @media (min-width: $screenS) {
+    & {
+      padding-bottom: 24px;
+    }
+  }
+  @media (min-width: $screenM) {
+    & {
+      padding-bottom: 32px;
+    }
+  }
+  @media (min-width: $screenL) {
+    & {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.section-header {
+  background: linear-gradient(to right, $bgGray 0%, $bgWhite 98.61%);
+
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $linkBorder;
+
+  &__title {
+    color: $linkGray;
+    font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    padding-left: 32px;
+  }
+}
+
+.brands-list {
+  margin: 0;
+  padding-top: 24px;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 16px;
+}
+
+.brands-list--show-part {
+  height: 160px;
+  overflow: hidden;
+}
+
+.brands-list__item {
+  width: 240px;
+}
+
+.brand:hover {
+  border: 2px solid $linkBorder;
+  transform: scale(0.9);
+}
+.brands-list__brand {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  width: 240px;
+  height: 72px;
+  background-color: $bgWhite;
+  border: 1px solid $brandBorder;
+  border-radius: 6px;
+}
+
+@media (min-width: $screenS) {
+  .header__title {
+    padding-left: 16px;
+  }
+
+  .brands-list {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .swiper {
+    width: 100%;
+    padding-left: 16px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $paginBlt;
+  }
+
+  .brands-list--show-part {
+    height: 160px;
+  }
+}
+
+@media (min-width: $screenM) {
+  .header__title {
+    padding-left: 0;
+  }
+  .brands-list {
+    display: flex;
+    column-gap: 24px;
+    padding-left: 0;
+    row-gap: 16px;
+    align-content: start;
+    flex-wrap: wrap;
+    padding-top: 0;
+  }
+  .brands-list__brand {
+    width: 224px;
+  }
+  .brands-list__item {
+    width: 224px;
+  }
+}
+@media (min-width: $screenL) {
+  .brands-list {
+    padding-left: 0;
+    column-gap: 32px;
+
+    &__brand {
+      width: 240px;
+    }
+  }
+}

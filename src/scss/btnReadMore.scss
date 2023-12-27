@@ -1,0 +1,43 @@
+.read-more-button {
+  padding: 0;
+  border: none;
+  background: url(../img/read-more-close.svg) no-repeat left center;
+  width: 140px;
+  height: 24px;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $textMain;
+  align-self: center;
+  text-align: left;
+  padding-left: 20px;
+  transition-duration: 0.5s;
+}
+.read-more-button--open {
+  background: url(../img/read-more-open.svg) no-repeat left center;
+}
+
+.read-more-button--close {
+  background: url(../img/read-more-close.svg) no-repeat left center;
+}
+
+.read-more-button:hover {
+  color: $btnTap;
+}
+
+.footer__read-more-button {
+  margin-left: 32px;
+
+  @media (min-width: $screenS) {
+    & {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screenM) {
+    & {
+      display: block;
+    }
+  }
+}

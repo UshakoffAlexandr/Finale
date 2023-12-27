@@ -1,0 +1,19 @@
+.form-button {
+  padding-left: 12px;
+  padding-right: 8px;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15000000596046448px;
+  text-align: left;
+  color: $bgWhite;
+  width: 119px;
+  height: 32px;
+  border: none;
+  border-radius: 16px;
+  background: $btnTap url(../img/arroy-right.svg) no-repeat 90% center;
+
+  &:hover {
+    border: 2px solid $linkBorder;
+    transform: scale(1.2);
+  }
+}

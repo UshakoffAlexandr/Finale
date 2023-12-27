@@ -1,0 +1,388 @@
+html {
+  font-family: 'TT Lakes', 'Open Sans', 'Arial', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $bgGray;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family: 'TT Lakes';
+}
+a {
+  text-decoration: inherit;
+  color: $textMain;
+}
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-blocks-container {
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (min-width: $screenEL) {
+    .mobile-menu-block {
+      display: block;
+      width: 320px;
+      position: relative;
+      left: 0;
+      box-shadow: none;
+    }
+    .blocks-without-menu {
+      width: 1120px;
+    }
+  }
+}
+
+.blocks-without-menu {
+  min-width: 320px;
+}
+.main-slide {
+  @media (min-width: $screenS) {
+    & {
+      padding-bottom: 24px;
+    }
+  }
+  @media (min-width: $screenM) {
+    & {
+      padding-bottom: 32px;
+    }
+  }
+  @media (min-width: $screenL) {
+    & {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: 2px solid $headBorder;
+  width: 100%;
+  min-width: 320px;
+  min-height: 88px;
+  background-color: $bgWhite;
+}
+
+.header__contacts-side {
+  margin-right: 20px;
+}
+
+.main-container {
+  background-color: $bgGray;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+.contacts-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+.repair-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+.title {
+  width: 100%;
+
+  background: url(../img/highlight.svg) no-repeat left center;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $screenS) {
+    &__repair-side {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screenEL) {
+    &__repair-side {
+      margin-right: 32px;
+      display: flex;
+      width: 380px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: right;
+    color: $textMain;
+    padding-left: 32px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+  @media (min-width: $screenS) {
+    & {
+      padding-left: 16px;
+    }
+
+    &__item--hiden-320 {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screenM) {
+    & {
+      padding-left: 24px;
+    }
+
+    &__item--hiden-320 {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screenEL) {
+    & {
+      padding-left: 32px;
+      padding-right: 32px;
+
+      overflow: visible;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 82px;
+      flex-shrink: 0;
+    }
+
+    &__item--hiden-320 {
+      display: none;
+    }
+
+    &__item--hiden-1120 {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding: 8px 12px;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: $linkGray;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__item--selected {
+    border: 2px solid $linkBorder;
+    border-radius: 5px;
+    background-color: $bgWhite;
+    pointer-events: none;
+  }
+
+  &__link:hover {
+    text-shadow: 0 0 1px $textMain;
+  }
+}
+
+.main-slide {
+  display: flex;
+  justify-content: space-between;
+
+  .text-content {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    &__text--show-part {
+      height: 90px;
+      overflow: hidden;
+      @media (min-width: 639px) {
+        height: 80px;
+      }
+    }
+  }
+
+  @media (min-width: $screenS) {
+    & {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+
+    &__text-content {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    .text {
+      line-height: 18px;
+    }
+
+    .illustraton {
+      min-width: 320px;
+      overflow: hidden;
+    }
+    .illustraton__img {
+      width: 100%;
+      padding-top: 20px;
+    }
+  }
+
+  @media (min-width: $screenM) {
+    & {
+      width: 100%;
+      min-width: 768px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+
+    .text-content__text--show-part {
+      height: 160px;
+      overflow: hidden;
+    }
+    .text-content {
+      width: 45%;
+      padding-top: 10px;
+      padding-left: 24px;
+    }
+    .illustraton {
+      width: 45%;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .illustraton__img {
+      width: 100%;
+      padding-top: 20px;
+    }
+    .text {
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: $screenL) {
+    .body__overflow-off {
+      overflow: hidden;
+      position: fixed;
+    }
+    .text-content__text--show-part {
+      height: 160px;
+      overflow: hidden;
+    }
+    .text-content {
+      width: 44%;
+    }
+    .illustraton {
+      width: 44%;
+
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    .illustraton__img {
+      width: 100%;
+      padding-top: 20px;
+    }
+  }
+}
+
+@media (min-width: $screenS) {
+  .body__overflow-off {
+    overflow: hidden;
+    position: fixed;
+  }
+  .header__contacts-side {
+    display: none;
+  }
+
+  .header__logo-side {
+    margin-left: 16px;
+  }
+
+  .header__repair-side {
+    margin-right: 16px;
+  }
+
+  .header__repair-side::before {
+    content: '';
+    height: 100%;
+    width: 8px;
+    background: url(../img/divider.svg) no-repeat left 50%;
+  }
+}
+
+@media (min-width: $screenM) {
+  .body__overflow-off {
+    overflow: hidden;
+  }
+  .logo-img {
+    padding-left: 22px;
+    background: url(../img/divider.svg) no-repeat left 50%;
+  }
+  .header__logo-side {
+    margin-left: 24px;
+  }
+  .header__repair-side {
+    margin-right: 24px;
+  }
+
+  .header__repair-side::before {
+    content: '';
+    height: 100%;
+    width: 8px;
+    background: url(../img/divider.svg) no-repeat left 50%;
+  }
+
+  .header__contacts-side {
+    display: flex;
+    margin-left: auto;
+  }
+
+  @media (min-width: $screenEL) {
+    .body__overflow-off {
+      overflow: auto;
+      position: relative;
+    }
+    .header {
+      display: none;
+    }
+  }
+}
