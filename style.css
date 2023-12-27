@@ -574,7 +574,7 @@ li {
   row-gap: 16px; }
   .devices-list .device-card:hover {
     border: 2px solid #b8ffec;
-    transform: scale(0.9); }
+    transform: scale(0.96); }
   @media (min-width: 320px) {
     .devices-list {
       margin: 0;
